@@ -1,5 +1,7 @@
 {
   "name": "appAPIs",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

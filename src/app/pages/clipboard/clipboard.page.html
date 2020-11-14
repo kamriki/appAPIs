@@ -5,5 +5,13 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-item>
+    <ion-input [(ngModel)]="copyText"></ion-input>
+    <ion-button (click)="CopyText()">Copy</ion-button>
+  </ion-item>
+  <ion-item>
+    <ion-input [(ngModel)]="pasteText"></ion-input>
+    <ion-button (click)="PasteText()">Paste</ion-button>
+  </ion-item>
+  <ion-button expand="full" (click)="ClearCopy()">Clear</ion-button>
 </ion-content>
