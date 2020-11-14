@@ -2,15 +2,10 @@ import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
+  { path: '', redirectTo: 'clipboard', pathMatch: 'full' },
+  { path: 'home', loadChildren: () => import('./pages/home/home.module').then( m => m.HomePageModule) },
+  { path: 'canvas', loadChildren: () => import('./pages/canvas/canvas.module').then( m => m.CanvasPageModule) },
+  { path: 'clipboard', loadChildren: () => import('./pages/clipboard/clipboard.module').then( m => m.ClipboardPageModule) }
 ];
 
 @NgModule({
